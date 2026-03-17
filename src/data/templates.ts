@@ -1,0 +1,426 @@
+export type Template = {
+  name: string;
+  url: string;
+  stack: string[];
+  features: string[];
+  license: string;
+  popularity: string;
+  bestFor: string;
+  description: string;
+  tier: number;
+  tierLabel: string;
+  category: string;
+};
+
+export const templates: Template[] = [
+  // TIER 1 — Essential Picks
+  {
+    name: "shadcn/ui",
+    url: "https://ui.shadcn.com",
+    stack: ["Next.js", "React", "Radix UI", "Tailwind CSS"],
+    features: [
+      "Copy-paste components",
+      "Full code ownership",
+      "Dark mode",
+      "Theming",
+      "TypeScript-first",
+      "Accessible",
+    ],
+    license: "MIT (Free)",
+    popularity: "De facto standard for React/Next.js",
+    bestFor: "SaaS, dashboards, landing pages, any React app",
+    description:
+      "The most popular component system for React. Copy-paste accessible components built on Radix UI and Tailwind CSS. You own the code — no npm dependency. Massive ecosystem of blocks and templates.",
+    tier: 1,
+    tierLabel: "Essential Pick",
+    category: "Component System",
+  },
+  {
+    name: "create-t3-app (T3 Stack)",
+    url: "https://github.com/t3-oss/create-t3-app",
+    stack: ["Next.js", "tRPC", "Prisma/Drizzle", "Tailwind CSS", "Auth.js", "TypeScript"],
+    features: [
+      "End-to-end type safety",
+      "Modular — pick what you need",
+      "CLI scaffolding",
+      "Full-stack",
+    ],
+    license: "MIT (Free)",
+    popularity: "28,700+ GitHub stars",
+    bestFor: "Full-stack typesafe web apps, SaaS MVPs",
+    description:
+      "The go-to full-stack starter for typesafe Next.js apps. Includes tRPC for end-to-end type safety, Prisma/Drizzle for DB, and Auth.js. Modular — only include what you need.",
+    tier: 1,
+    tierLabel: "Essential Pick",
+    category: "Full-Stack Starter",
+  },
+  {
+    name: "Tailwind Plus (Tailwind UI)",
+    url: "https://tailwindcss.com/plus/templates",
+    stack: ["Tailwind CSS", "React/Next.js", "Vue/Nuxt"],
+    features: [
+      "Official Tailwind templates",
+      "Production-ready",
+      "Beautiful design",
+      "Multiple frameworks",
+    ],
+    license: "Paid ($299 one-time)",
+    popularity: "Official — from the Tailwind CSS team",
+    bestFor: "Premium SaaS sites, marketing pages, app UIs",
+    description:
+      "Official premium templates from the creators of Tailwind CSS. The gold standard for design quality. Includes templates for SaaS, marketing, and application UIs in React and Vue.",
+    tier: 1,
+    tierLabel: "Essential Pick",
+    category: "Premium Templates",
+  },
+  {
+    name: "DaisyUI",
+    url: "https://daisyui.com",
+    stack: ["Tailwind CSS"],
+    features: [
+      "35 built-in themes",
+      "Zero JavaScript",
+      "Semantic class names",
+      "Framework-agnostic",
+      "Tailwind v4 compatible",
+    ],
+    license: "MIT (Free)",
+    popularity: "19M+ npm installs",
+    bestFor: "Any project needing rapid UI with theme support",
+    description:
+      "The most popular Tailwind CSS component library. Pure CSS — no JavaScript required, works with any framework. 35 built-in themes make it incredibly fast to prototype.",
+    tier: 1,
+    tierLabel: "Essential Pick",
+    category: "Component Library",
+  },
+  // TIER 2 — Framework-Specific Starters
+  {
+    name: "Vercel Templates Gallery",
+    url: "https://vercel.com/templates",
+    stack: ["Next.js", "Various integrations"],
+    features: [
+      "One-click deploy",
+      "AI chatbot starters",
+      "Blog starters",
+      "E-commerce starters",
+      "SaaS starters",
+    ],
+    license: "Free (MIT)",
+    popularity: "Official Vercel templates",
+    bestFor: "Quick-start Next.js projects",
+    description:
+      "Official starter templates from Vercel. One-click deploy to production. Covers AI chatbots, blogs, e-commerce, SaaS, and more with pre-configured integrations.",
+    tier: 2,
+    tierLabel: "Framework Starter",
+    category: "Next.js",
+  },
+  {
+    name: "Next.js Templates",
+    url: "https://nextjstemplates.com",
+    stack: ["Next.js", "Tailwind CSS", "shadcn/ui"],
+    features: [
+      "25+ templates",
+      "SaaS templates",
+      "Dashboard templates",
+      "AI app templates",
+      "Landing pages",
+    ],
+    license: "Free tier + Premium",
+    popularity: "Popular Next.js template marketplace",
+    bestFor: "Production-ready Next.js sites",
+    description:
+      "Curated collection of 25+ free and premium Next.js templates covering SaaS, dashboards, AI apps, and landing pages. All built with Tailwind CSS.",
+    tier: 2,
+    tierLabel: "Framework Starter",
+    category: "Next.js",
+  },
+  {
+    name: "ShipFast",
+    url: "https://shipfa.st",
+    stack: ["Next.js", "Tailwind CSS", "MongoDB/Supabase", "Stripe", "NextAuth"],
+    features: [
+      "Authentication",
+      "Payments (Stripe)",
+      "SEO optimized",
+      "Email integration",
+      "Complete SaaS boilerplate",
+    ],
+    license: "Paid ($199)",
+    popularity: "Top SaaS boilerplate",
+    bestFor: "Rapid MVP / SaaS launch",
+    description:
+      "Ship your SaaS in days, not weeks. Complete boilerplate with auth, payments, emails, SEO, and database — all pre-configured and ready to customize.",
+    tier: 2,
+    tierLabel: "Framework Starter",
+    category: "SaaS Boilerplate",
+  },
+  {
+    name: "Supastarter",
+    url: "https://supastarter.dev",
+    stack: ["Next.js / SvelteKit / Nuxt", "Supabase", "Tailwind CSS", "Stripe"],
+    features: [
+      "Multi-tenancy",
+      "RBAC",
+      "i18n",
+      "Billing",
+      "Available for 3 frameworks",
+    ],
+    license: "Paid ($349)",
+    popularity: "Multi-framework SaaS starter",
+    bestFor: "B2B SaaS with team/org features",
+    description:
+      "Production-ready SaaS starter available for Next.js, SvelteKit, and Nuxt. Includes multi-tenancy, role-based access, internationalization, and Stripe billing.",
+    tier: 2,
+    tierLabel: "Framework Starter",
+    category: "SaaS Boilerplate",
+  },
+  {
+    name: "AstroWind",
+    url: "https://github.com/onwidget/astrowind",
+    stack: ["Astro 5", "Tailwind CSS", "MDX"],
+    features: [
+      "Dark mode",
+      "RTL support",
+      "Dynamic OG images",
+      "Blog",
+      "Lighthouse 95+",
+      "SEO optimized",
+    ],
+    license: "MIT (Free)",
+    popularity: "5,400+ GitHub stars — most starred Astro theme",
+    bestFor: "Startups, portfolios, marketing sites, blogs",
+    description:
+      "The most popular Astro theme, 3 years running. Near-perfect Lighthouse scores, built-in blog, dark mode, and SEO optimization. Perfect for content-focused sites.",
+    tier: 2,
+    tierLabel: "Framework Starter",
+    category: "Astro",
+  },
+  {
+    name: "Astroship",
+    url: "https://astroship.web3templates.com",
+    stack: ["Astro", "Tailwind CSS"],
+    features: [
+      "Landing page sections",
+      "Hero, features, pricing, CTA",
+      "Responsive",
+      "Minimal",
+    ],
+    license: "MIT (Free)",
+    popularity: "Popular Astro landing page template",
+    bestFor: "Startup and marketing landing pages",
+    description:
+      "Clean, minimal Astro template with all the essential landing page sections: hero, features, pricing, and CTA. Fast and lightweight.",
+    tier: 2,
+    tierLabel: "Framework Starter",
+    category: "Astro",
+  },
+  {
+    name: "CMSaasStarter",
+    url: "https://github.com/CriticalMoments/CMSaasStarter",
+    stack: ["SvelteKit", "Supabase", "Stripe", "Tailwind CSS", "DaisyUI"],
+    features: [
+      "Auth",
+      "Subscription billing",
+      "100/100 PageSpeed",
+      "Production-ready",
+    ],
+    license: "MIT (Free)",
+    popularity: "2,300+ GitHub stars",
+    bestFor: "SaaS applications with SvelteKit",
+    description:
+      "Full-featured SvelteKit SaaS starter with auth, Stripe billing, and perfect PageSpeed scores. Uses DaisyUI for rapid UI development.",
+    tier: 2,
+    tierLabel: "Framework Starter",
+    category: "SvelteKit",
+  },
+  {
+    name: "Nuxt Starter Template",
+    url: "https://starter-template.nuxt.dev",
+    stack: ["Nuxt 3", "Nuxt UI", "Vue 3"],
+    features: [
+      "Official starter",
+      "Nuxt UI components",
+      "SSR/SSG",
+      "TypeScript",
+    ],
+    license: "Free",
+    popularity: "Official Nuxt template",
+    bestFor: "Vue.js full-stack applications",
+    description:
+      "The official Nuxt 3 starter template with Nuxt UI components. Supports server-side rendering, static site generation, and TypeScript out of the box.",
+    tier: 2,
+    tierLabel: "Framework Starter",
+    category: "Nuxt/Vue",
+  },
+  // TIER 3 — Component Libraries & UI Kits
+  {
+    name: "Flowbite",
+    url: "https://flowbite.com",
+    stack: ["Tailwind CSS", "JavaScript", "React/Vue/Svelte/Angular adapters"],
+    features: [
+      "400+ UI sections",
+      "Dark mode",
+      "Responsive",
+      "RTL",
+      "Interactive JS components",
+    ],
+    license: "Free core + Pro",
+    popularity: "Multi-framework leader",
+    bestFor: "Multi-framework projects with interactive components",
+    description:
+      "400+ Tailwind CSS UI sections with interactive JavaScript components. Adapters for React, Vue, Svelte, and Angular make it truly framework-agnostic.",
+    tier: 3,
+    tierLabel: "UI Kit / Components",
+    category: "Component Library",
+  },
+  {
+    name: "HyperUI",
+    url: "https://hyperui.dev",
+    stack: ["Tailwind CSS", "HTML"],
+    features: [
+      "Largest free Tailwind collection",
+      "Copy-paste HTML",
+      "Marketing, e-commerce, app UI",
+      "Zero bundle impact",
+    ],
+    license: "MIT (Free)",
+    popularity: "Most popular free Tailwind component site",
+    bestFor: "Quick prototyping, grabbing individual sections",
+    description:
+      "The largest free collection of Tailwind CSS components on GitHub. Pure HTML — just copy and paste. Zero dependencies, zero bundle impact.",
+    tier: 3,
+    tierLabel: "UI Kit / Components",
+    category: "Component Library",
+  },
+  {
+    name: "Aceternity UI",
+    url: "https://ui.aceternity.com",
+    stack: ["React", "Tailwind CSS", "Framer Motion"],
+    features: [
+      "200+ animated components",
+      "3D cards",
+      "Parallax effects",
+      "Text animations",
+    ],
+    license: "Free",
+    popularity: "120,000+ users",
+    bestFor: "Modern animated / interactive UIs",
+    description:
+      "Stunning animated React components built with Framer Motion and Tailwind CSS. 3D cards, parallax scrolling, text animations, and more for eye-catching sites.",
+    tier: 3,
+    tierLabel: "UI Kit / Components",
+    category: "Animation Library",
+  },
+  {
+    name: "Tremor",
+    url: "https://tremor.so",
+    stack: ["React", "Tailwind CSS", "Radix UI"],
+    features: [
+      "35+ data viz components",
+      "Accessible",
+      "Charts & analytics",
+      "Composable",
+    ],
+    license: "Apache 2.0 (Free)",
+    popularity: "Leading data viz component library",
+    bestFor: "Data dashboards and analytics interfaces",
+    description:
+      "35+ composable data visualization components for React. Built for dashboards and analytics with charts, KPI cards, and data tables — all accessible by default.",
+    tier: 3,
+    tierLabel: "UI Kit / Components",
+    category: "Data Visualization",
+  },
+  // TIER 4 — Admin Dashboards
+  {
+    name: "TailAdmin",
+    url: "https://tailadmin.com",
+    stack: ["Tailwind CSS", "HTML/React/Next.js/Vue/Angular/Laravel"],
+    features: [
+      "7 dashboard layouts",
+      "500+ UI elements",
+      "ApexCharts",
+      "Dark mode",
+      "Multi-framework",
+    ],
+    license: "Free + Pro",
+    popularity: "Most popular Tailwind admin template",
+    bestFor: "Admin panels, back-end dashboards",
+    description:
+      "The leading Tailwind CSS admin dashboard template. Available in HTML, React, Next.js, Vue, Angular, and Laravel. 7 layout variants with 500+ UI elements.",
+    tier: 4,
+    tierLabel: "Admin Dashboard",
+    category: "Dashboard",
+  },
+  {
+    name: "Shadcn Admin Dashboard",
+    url: "https://github.com/satnaing/shadcn-admin",
+    stack: ["Next.js", "React", "shadcn/ui", "Tailwind CSS", "Clerk"],
+    features: [
+      "Server-side search/filtering",
+      "6+ themes",
+      "TanStack Tables",
+      "Clerk auth",
+    ],
+    license: "Free (Open Source)",
+    popularity: "6,000+ GitHub stars",
+    bestFor: "Production admin dashboards with modern auth",
+    description:
+      "Full-featured admin dashboard built on shadcn/ui with Clerk authentication, TanStack Tables, server-side pagination, and 6+ theme options.",
+    tier: 4,
+    tierLabel: "Admin Dashboard",
+    category: "Dashboard",
+  },
+  // TIER 5 — General HTML/CSS
+  {
+    name: "Colorlib Templates",
+    url: "https://colorlib.com/wp/templates/",
+    stack: ["HTML5", "CSS3", "Bootstrap 5", "Astro + Tailwind"],
+    features: [
+      "1,500+ templates",
+      "Lighthouse 95+",
+      "Every niche covered",
+    ],
+    license: "Free (attribution) + Premium",
+    popularity: "Largest free template collection",
+    bestFor: "Quick static sites across all industries",
+    description:
+      "The largest collection of free website templates with 1,500+ options. Covers every industry and niche. Now also available in Astro + Tailwind CSS builds.",
+    tier: 5,
+    tierLabel: "HTML/CSS Templates",
+    category: "General",
+  },
+  {
+    name: "BootstrapMade",
+    url: "https://bootstrapmade.com",
+    stack: ["Bootstrap 5", "HTML5", "CSS3"],
+    features: [
+      "70+ free templates",
+      "Professional design",
+      "Responsive",
+      "Mobile-first",
+    ],
+    license: "Free (attribution) + Premium",
+    popularity: "Leading Bootstrap template site",
+    bestFor: "Traditional business/corporate sites, portfolios",
+    description:
+      "70+ professionally designed free Bootstrap 5 templates. Great for traditional business websites, corporate sites, and portfolios with classic layouts.",
+    tier: 5,
+    tierLabel: "HTML/CSS Templates",
+    category: "General",
+  },
+];
+
+export const useCaseMatrix = [
+  { useCase: "SaaS Landing Page", topPick: "AstroWind (free) / Tailwind Plus (paid)", runnerUp: "Astroship" },
+  { useCase: "Full-Stack SaaS App", topPick: "create-t3-app", runnerUp: "ShipFast (paid)" },
+  { useCase: "Admin Dashboard", topPick: "TailAdmin", runnerUp: "Shadcn Admin Dashboard" },
+  { useCase: "Portfolio", topPick: "AstroWind", runnerUp: "Astroship" },
+  { useCase: "Blog", topPick: "AstroWind", runnerUp: "Next.js Blog Starter" },
+  { useCase: "E-commerce", topPick: "Flowbite + Tailwind", runnerUp: "Vercel Commerce" },
+  { useCase: "AI App", topPick: "Vercel AI Chatbot Template", runnerUp: "create-t3-app" },
+  { useCase: "Data Dashboard", topPick: "Tremor", runnerUp: "TailAdmin" },
+  { useCase: "Multi-Framework", topPick: "DaisyUI (CSS-only)", runnerUp: "Flowbite" },
+  { useCase: "Animated / Modern UI", topPick: "Aceternity UI", runnerUp: "shadcn/ui + Framer Motion" },
+  { useCase: "Vue / Nuxt App", topPick: "Nuxt Starter Template", runnerUp: "Flowbite Vue" },
+  { useCase: "Svelte App", topPick: "CMSaasStarter", runnerUp: "Supastarter (paid)" },
+];
