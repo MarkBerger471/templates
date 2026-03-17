@@ -10,25 +10,7 @@ export type Template = {
   tier: number;
   tierLabel: string;
   category: string;
-  gradient: string;
 };
-
-export const categories = [
-  "All",
-  "Component System",
-  "Component Library",
-  "Full-Stack Starter",
-  "SaaS Boilerplate",
-  "Next.js",
-  "Astro",
-  "SvelteKit",
-  "Nuxt/Vue",
-  "Dashboard",
-  "Animation Library",
-  "Data Visualization",
-  "Premium Templates",
-  "General",
-] as const;
 
 export const templates: Template[] = [
   // TIER 1 — Essential Picks
@@ -48,11 +30,10 @@ export const templates: Template[] = [
     popularity: "De facto standard for React/Next.js",
     bestFor: "SaaS, dashboards, landing pages, any React app",
     description:
-      "The most popular component system for React. Copy-paste accessible components built on Radix UI and Tailwind CSS. You own the code — no npm dependency.",
+      "The most popular component system for React. Copy-paste accessible components built on Radix UI and Tailwind CSS. You own the code — no npm dependency. Massive ecosystem of blocks and templates.",
     tier: 1,
     tierLabel: "Essential Pick",
     category: "Component System",
-    gradient: "from-zinc-900 to-zinc-600",
   },
   {
     name: "create-t3-app (T3 Stack)",
@@ -68,11 +49,10 @@ export const templates: Template[] = [
     popularity: "28,700+ GitHub stars",
     bestFor: "Full-stack typesafe web apps, SaaS MVPs",
     description:
-      "The go-to full-stack starter for typesafe Next.js apps. Includes tRPC for end-to-end type safety, Prisma/Drizzle for DB, and Auth.js.",
+      "The go-to full-stack starter for typesafe Next.js apps. Includes tRPC for end-to-end type safety, Prisma/Drizzle for DB, and Auth.js. Modular — only include what you need.",
     tier: 1,
     tierLabel: "Essential Pick",
     category: "Full-Stack Starter",
-    gradient: "from-violet-600 to-indigo-600",
   },
   {
     name: "Tailwind Plus (Tailwind UI)",
@@ -88,11 +68,10 @@ export const templates: Template[] = [
     popularity: "Official — from the Tailwind CSS team",
     bestFor: "Premium SaaS sites, marketing pages, app UIs",
     description:
-      "Official premium templates from the creators of Tailwind CSS. The gold standard for design quality across SaaS, marketing, and application UIs.",
+      "Official premium templates from the creators of Tailwind CSS. The gold standard for design quality. Includes templates for SaaS, marketing, and application UIs in React and Vue.",
     tier: 1,
     tierLabel: "Essential Pick",
     category: "Premium Templates",
-    gradient: "from-sky-500 to-cyan-400",
   },
   {
     name: "DaisyUI",
@@ -109,11 +88,10 @@ export const templates: Template[] = [
     popularity: "19M+ npm installs",
     bestFor: "Any project needing rapid UI with theme support",
     description:
-      "The most popular Tailwind CSS component library. Pure CSS — no JavaScript required, works with any framework. 35 built-in themes.",
+      "The most popular Tailwind CSS component library. Pure CSS — no JavaScript required, works with any framework. 35 built-in themes make it incredibly fast to prototype.",
     tier: 1,
     tierLabel: "Essential Pick",
     category: "Component Library",
-    gradient: "from-emerald-500 to-teal-500",
   },
   // TIER 2 — Framework-Specific Starters
   {
@@ -131,11 +109,10 @@ export const templates: Template[] = [
     popularity: "Official Vercel templates",
     bestFor: "Quick-start Next.js projects",
     description:
-      "Official starter templates from Vercel with one-click deploy. Covers AI chatbots, blogs, e-commerce, SaaS, and more.",
+      "Official starter templates from Vercel. One-click deploy to production. Covers AI chatbots, blogs, e-commerce, SaaS, and more with pre-configured integrations.",
     tier: 2,
     tierLabel: "Framework Starter",
     category: "Next.js",
-    gradient: "from-black to-zinc-700",
   },
   {
     name: "Next.js Templates",
@@ -152,11 +129,10 @@ export const templates: Template[] = [
     popularity: "Popular Next.js template marketplace",
     bestFor: "Production-ready Next.js sites",
     description:
-      "Curated collection of 25+ free and premium Next.js templates covering SaaS, dashboards, AI apps, and landing pages.",
+      "Curated collection of 25+ free and premium Next.js templates covering SaaS, dashboards, AI apps, and landing pages. All built with Tailwind CSS.",
     tier: 2,
     tierLabel: "Framework Starter",
     category: "Next.js",
-    gradient: "from-blue-600 to-blue-400",
   },
   {
     name: "ShipFast",
@@ -173,11 +149,10 @@ export const templates: Template[] = [
     popularity: "Top SaaS boilerplate",
     bestFor: "Rapid MVP / SaaS launch",
     description:
-      "Ship your SaaS in days, not weeks. Complete boilerplate with auth, payments, emails, SEO, and database.",
+      "Ship your SaaS in days, not weeks. Complete boilerplate with auth, payments, emails, SEO, and database — all pre-configured and ready to customize.",
     tier: 2,
     tierLabel: "Framework Starter",
     category: "SaaS Boilerplate",
-    gradient: "from-orange-500 to-amber-500",
   },
   {
     name: "Supastarter",
@@ -194,11 +169,10 @@ export const templates: Template[] = [
     popularity: "Multi-framework SaaS starter",
     bestFor: "B2B SaaS with team/org features",
     description:
-      "Production-ready SaaS starter for Next.js, SvelteKit, and Nuxt. Multi-tenancy, RBAC, i18n, and Stripe billing included.",
+      "Production-ready SaaS starter available for Next.js, SvelteKit, and Nuxt. Includes multi-tenancy, role-based access, internationalization, and Stripe billing.",
     tier: 2,
     tierLabel: "Framework Starter",
     category: "SaaS Boilerplate",
-    gradient: "from-green-500 to-emerald-400",
   },
   {
     name: "AstroWind",
@@ -216,11 +190,10 @@ export const templates: Template[] = [
     popularity: "5,400+ GitHub stars — most starred Astro theme",
     bestFor: "Startups, portfolios, marketing sites, blogs",
     description:
-      "The most popular Astro theme, 3 years running. Near-perfect Lighthouse scores with built-in blog, dark mode, and SEO.",
+      "The most popular Astro theme, 3 years running. Near-perfect Lighthouse scores, built-in blog, dark mode, and SEO optimization. Perfect for content-focused sites.",
     tier: 2,
     tierLabel: "Framework Starter",
     category: "Astro",
-    gradient: "from-purple-600 to-pink-500",
   },
   {
     name: "Astroship",
@@ -236,11 +209,10 @@ export const templates: Template[] = [
     popularity: "Popular Astro landing page template",
     bestFor: "Startup and marketing landing pages",
     description:
-      "Clean, minimal Astro template with hero, features, pricing, and CTA sections. Fast and lightweight.",
+      "Clean, minimal Astro template with all the essential landing page sections: hero, features, pricing, and CTA. Fast and lightweight.",
     tier: 2,
     tierLabel: "Framework Starter",
     category: "Astro",
-    gradient: "from-fuchsia-500 to-purple-500",
   },
   {
     name: "CMSaasStarter",
@@ -256,11 +228,10 @@ export const templates: Template[] = [
     popularity: "2,300+ GitHub stars",
     bestFor: "SaaS applications with SvelteKit",
     description:
-      "Full-featured SvelteKit SaaS starter with auth, Stripe billing, and perfect PageSpeed scores.",
+      "Full-featured SvelteKit SaaS starter with auth, Stripe billing, and perfect PageSpeed scores. Uses DaisyUI for rapid UI development.",
     tier: 2,
     tierLabel: "Framework Starter",
     category: "SvelteKit",
-    gradient: "from-red-500 to-orange-500",
   },
   {
     name: "Nuxt Starter Template",
@@ -276,11 +247,10 @@ export const templates: Template[] = [
     popularity: "Official Nuxt template",
     bestFor: "Vue.js full-stack applications",
     description:
-      "Official Nuxt 3 starter with Nuxt UI components. SSR, SSG, and TypeScript out of the box.",
+      "The official Nuxt 3 starter template with Nuxt UI components. Supports server-side rendering, static site generation, and TypeScript out of the box.",
     tier: 2,
     tierLabel: "Framework Starter",
     category: "Nuxt/Vue",
-    gradient: "from-green-600 to-lime-500",
   },
   // TIER 3 — Component Libraries & UI Kits
   {
@@ -298,11 +268,10 @@ export const templates: Template[] = [
     popularity: "Multi-framework leader",
     bestFor: "Multi-framework projects with interactive components",
     description:
-      "400+ Tailwind CSS UI sections with interactive JavaScript. Adapters for React, Vue, Svelte, and Angular.",
+      "400+ Tailwind CSS UI sections with interactive JavaScript components. Adapters for React, Vue, Svelte, and Angular make it truly framework-agnostic.",
     tier: 3,
     tierLabel: "UI Kit / Components",
     category: "Component Library",
-    gradient: "from-blue-500 to-indigo-500",
   },
   {
     name: "HyperUI",
@@ -318,11 +287,10 @@ export const templates: Template[] = [
     popularity: "Most popular free Tailwind component site",
     bestFor: "Quick prototyping, grabbing individual sections",
     description:
-      "The largest free Tailwind CSS component collection. Pure HTML copy-paste with zero bundle impact.",
+      "The largest free collection of Tailwind CSS components on GitHub. Pure HTML — just copy and paste. Zero dependencies, zero bundle impact.",
     tier: 3,
     tierLabel: "UI Kit / Components",
     category: "Component Library",
-    gradient: "from-pink-500 to-rose-500",
   },
   {
     name: "Aceternity UI",
@@ -338,11 +306,10 @@ export const templates: Template[] = [
     popularity: "120,000+ users",
     bestFor: "Modern animated / interactive UIs",
     description:
-      "Stunning animated React components with Framer Motion. 3D cards, parallax, text animations for eye-catching sites.",
+      "Stunning animated React components built with Framer Motion and Tailwind CSS. 3D cards, parallax scrolling, text animations, and more for eye-catching sites.",
     tier: 3,
     tierLabel: "UI Kit / Components",
     category: "Animation Library",
-    gradient: "from-cyan-500 to-blue-500",
   },
   {
     name: "Tremor",
@@ -358,11 +325,10 @@ export const templates: Template[] = [
     popularity: "Leading data viz component library",
     bestFor: "Data dashboards and analytics interfaces",
     description:
-      "35+ composable data visualization components for React. Charts, KPI cards, and data tables — accessible by default.",
+      "35+ composable data visualization components for React. Built for dashboards and analytics with charts, KPI cards, and data tables — all accessible by default.",
     tier: 3,
     tierLabel: "UI Kit / Components",
     category: "Data Visualization",
-    gradient: "from-indigo-500 to-violet-500",
   },
   // TIER 4 — Admin Dashboards
   {
@@ -380,11 +346,10 @@ export const templates: Template[] = [
     popularity: "Most popular Tailwind admin template",
     bestFor: "Admin panels, back-end dashboards",
     description:
-      "Leading Tailwind CSS admin dashboard. Available in 6 frameworks with 7 layout variants and 500+ UI elements.",
+      "The leading Tailwind CSS admin dashboard template. Available in HTML, React, Next.js, Vue, Angular, and Laravel. 7 layout variants with 500+ UI elements.",
     tier: 4,
     tierLabel: "Admin Dashboard",
     category: "Dashboard",
-    gradient: "from-slate-600 to-slate-400",
   },
   {
     name: "Shadcn Admin Dashboard",
@@ -400,11 +365,10 @@ export const templates: Template[] = [
     popularity: "6,000+ GitHub stars",
     bestFor: "Production admin dashboards with modern auth",
     description:
-      "Full-featured admin dashboard on shadcn/ui with Clerk auth, TanStack Tables, and 6+ theme options.",
+      "Full-featured admin dashboard built on shadcn/ui with Clerk authentication, TanStack Tables, server-side pagination, and 6+ theme options.",
     tier: 4,
     tierLabel: "Admin Dashboard",
     category: "Dashboard",
-    gradient: "from-zinc-700 to-zinc-500",
   },
   // TIER 5 — General HTML/CSS
   {
@@ -420,11 +384,10 @@ export const templates: Template[] = [
     popularity: "Largest free template collection",
     bestFor: "Quick static sites across all industries",
     description:
-      "1,500+ free website templates covering every industry. Now also available in Astro + Tailwind CSS builds.",
+      "The largest collection of free website templates with 1,500+ options. Covers every industry and niche. Now also available in Astro + Tailwind CSS builds.",
     tier: 5,
     tierLabel: "HTML/CSS Templates",
     category: "General",
-    gradient: "from-amber-500 to-yellow-400",
   },
   {
     name: "BootstrapMade",
@@ -440,11 +403,10 @@ export const templates: Template[] = [
     popularity: "Leading Bootstrap template site",
     bestFor: "Traditional business/corporate sites, portfolios",
     description:
-      "70+ professionally designed Bootstrap 5 templates for business, corporate, and portfolio sites.",
+      "70+ professionally designed free Bootstrap 5 templates. Great for traditional business websites, corporate sites, and portfolios with classic layouts.",
     tier: 5,
     tierLabel: "HTML/CSS Templates",
     category: "General",
-    gradient: "from-violet-500 to-purple-400",
   },
 ];
 
